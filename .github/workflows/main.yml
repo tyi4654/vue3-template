@@ -24,4 +24,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           branch: vite-build-src # 部署后提交到那个分支
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: ./dist
