@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { reactive, ref, provide, nextTick } from 'vue'
 import { useMouse } from './hooks/mouse'
 import SearchBar from './components/search-bar.vue'
@@ -52,14 +52,6 @@ function LeapYear(year) {
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
 }
 
-let attrId: string | number = '12'
-
-interface options {
-    name: string
-    attr: object
-    text: string
-}
-
 const elOptions = {
     name: 'div',
     attr: { class: 'link', title: 'this is a link', href: 'https://www.baidu.com/' },
@@ -68,7 +60,7 @@ const elOptions = {
 
 createElement(elOptions)
 
-function createElement(elOptions: options): void {
+function createElement(elOptions) {
     let el = document.createElement(elOptions.name)
     let props = Object.entries(elOptions.attr)
     for (let i = 0; i < props.length; i++) {
@@ -78,11 +70,7 @@ function createElement(elOptions: options): void {
     document.body.appendChild(el)
 }
 
-interface checkProps {
-    [propName: string]: any
-}
-
-function deepClone(obj: checkProps): object {
+function deepClone(obj) {
     let temp = Array.isArray(obj) ? [] : {}
     if (typeof obj !== 'object' || obj === null) {
         return obj
@@ -134,7 +122,6 @@ console.log(arr == arr1)
 </template>
 
 <style lang="scss" scoped>
-@import url(./app.scss);
 $bgColor: '#f00';
 $link-color: blue;
 $link-color: red;

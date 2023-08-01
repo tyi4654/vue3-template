@@ -32,6 +32,7 @@ export default defineConfig({
         })
     ], // 需要用到的插件数组
     server: {
-        open: true
+        open: true,
+        port: 3000
     }
 })
