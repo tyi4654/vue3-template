@@ -1,0 +1,23 @@
+{
+    "name": "my-vue3-app",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --port 8080",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "element-plus": "^2.3.4",
+        "js-md5": "^0.7.3",
+        "vue": "^3.2.47"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.1.0",
+        "sass": "^1.62.1",
+        "unplugin-auto-import": "^0.15.3",
+        "unplugin-vue-components": "^0.24.1",
+        "vite": "^4.3.0"
+    }
+}
