@@ -6,7 +6,7 @@ import App from './App.vue'
 
 const app = createApp(App)
 
-//console.log(import.meta.env)
+console.log(import.meta)
 
 //app.use(ElementPlus)
 

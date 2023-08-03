@@ -89,6 +89,10 @@ function deepClone(obj) {
     return temp
 }
 
+function changeOption(val) {
+    ElMessage.success(`你选择了${val}`)
+}
+
 var o = {
     a: 1,
     b: { c: 3, d: 4 },
@@ -109,10 +113,10 @@ console.log(arr == arr1)
     <h3>{{ x }},{{ y }}</h3>
     <SearchBar v-model="fromValue" placeholder="关键词搜索" size="large">
         <template #prepend>
-            <el-select v-model="select" size="large" placeholder="Select" style="width: 115px">
-                <el-option label="Restaurant" value="1" />
-                <el-option label="Order No." value="2" />
-                <el-option label="Tel" value="3" />
+            <el-select v-model="select" size="large" placeholder="Select" style="width: 115px" @change="changeOption">
+                <el-option label="Restaurant" value="Restaurant" />
+                <el-option label="Order No." value="Order No." />
+                <el-option label="Tel" value="Tel" />
             </el-select>
         </template>
         <template #append>
