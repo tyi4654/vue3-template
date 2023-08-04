@@ -16,7 +16,7 @@ export default defineConfig({
      * resolve.alias
      *
      */
-    base: './',
+    base: '/',
     compilerOptions: {
         // ...
         types: ['element-plus/global']
