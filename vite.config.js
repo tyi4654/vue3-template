@@ -16,7 +16,7 @@ export default defineConfig({
      * resolve.alias
      *
      */
-    base: '/',
+    base: '/vue3-template',
     compilerOptions: {
         // ...
         types: ['element-plus/global']
